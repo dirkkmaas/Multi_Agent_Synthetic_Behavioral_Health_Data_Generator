@@ -1,0 +1,81 @@
+=== Persona Feature Check ===
+age_group: All ages within bounds. Average age: 55.36
+gender: Distribution (expected vs actual):
+  female: expected 0.42, actual 0.44, count 11
+  male: expected 0.57, actual 0.56, count 14
+education_level: Distribution (expected vs actual):
+  doctorate and above: expected 0.10, actual 0.08, count 2
+  high_school: expected 0.20, actual 0.20, count 5
+  master: expected 0.30, actual 0.32, count 8
+  bachelor: expected 0.40, actual 0.40, count 10
+occupation_status: Distribution (expected vs actual):
+  self-employed: expected 0.10, actual 0.08, count 2
+  fulltime: expected 0.40, actual 0.40, count 10
+  unemployed: expected 0.10, actual 0.08, count 2
+  parttime: expected 0.40, actual 0.44, count 11
+marital_status: Distribution (expected vs actual):
+  separated: expected 0.00, actual 0.00, count 0
+  widowed: expected 0.00, actual 0.00, count 0
+  married: expected 0.50, actual 0.52, count 13
+  divorced: expected 0.10, actual 0.08, count 2
+  single: expected 0.10, actual 0.08, count 2
+  engaged: expected 0.30, actual 0.32, count 8
+standard: Skipped (non-numeric expected values)
+
+=== Event Constraint Violations ===
+No violations found.
+
+=== Seasonality/Trend Constraint Check ===
+Actual sample size (counted): 25
+Actual horizon (counted): 91 days
+Event: long_sleep
+  seasonality - morning: 0.0% actual, expected at least 0.0% (events: 0/2275)
+  seasonality - afternoon: 0.0% actual, expected at least 0.0% (events: 0/2275)
+  seasonality - evening: 0.0% actual, expected at least 0.0% (events: 0/2275)
+  seasonality - night: 100.0% actual, expected at least 100.0% (events: 2275/2275)
+Event: working
+  seasonality - Avg events per day in ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']: 2.00, other days: 0.00, diff: 2.00 (inf%), expected diff: 100
+  seasonality - morning: 50.0% actual, expected at least 50.0% (events: 1625/3250)
+  seasonality - afternoon: 50.0% actual, expected at least 50.0% (events: 1625/3250)
+  seasonality - evening: 0.0% actual, expected at least 0.0% (events: 0/3250)
+  seasonality - night: 0.0% actual, expected at least 0.0% (events: 0/3250)
+Event: walking
+  seasonality - morning: 37.1% actual, expected at least 40.0% (events: 5431/14649)
+  seasonality - afternoon: 19.4% actual, expected at least 20.0% (events: 2849/14649)
+  seasonality - evening: 21.3% actual, expected at least 20.0% (events: 3117/14649)
+  seasonality - night: 21.4% actual, expected at least 20.0% (events: 3135/14649)
+  seasonality - Outside defined windows: 0.8% (events: 117/14649)
+  seasonality - Avg events per day in ['Saturday', 'Sunday']: 7.29, other days: 6.10, diff: 1.19 (19.5%), expected diff: 25
+  trend - trend diff 3, expected at least 2 increasing
+Event: raining
+  seasonality - morning: 36.9% actual, expected at least 40.0% (events: 3613/9781)
+  seasonality - afternoon: 17.0% actual, expected at least 20.0% (events: 1664/9781)
+  seasonality - evening: 16.1% actual, expected at least 20.0% (events: 1576/9781)
+  seasonality - night: 20.8% actual, expected at least 20.0% (events: 2033/9781)
+  seasonality - Outside defined windows: 9.2% (events: 895/9781)
+  trend - trend diff -4, expected at least 3 decreasing
+Event: smoking
+  seasonality - morning: 39.9% actual, expected at least 40.0% (events: 5152/12911)
+  seasonality - afternoon: 18.0% actual, expected at least 20.0% (events: 2321/12911)
+  seasonality - evening: 16.3% actual, expected at least 20.0% (events: 2101/12911)
+  seasonality - night: 24.3% actual, expected at least 20.0% (events: 3133/12911)
+  seasonality - Outside defined windows: 1.6% (events: 204/12911)
+  seasonality - Avg events per day in ['Saturday', 'Sunday']: 6.30, other days: 5.42, diff: 0.88 (16.2%), expected diff: 10
+  trend - trend diff -8, expected at least 8 decreasing
+  trend - trend diff 2, expected at least 1 increasing
+  trend - trend diff -1, expected at least 1 decreasing
+  trend - trend diff 4, expected at least 3 increasing
+  trend - trend diff -1, expected at least 1 decreasing
+  trend - trend diff 5, expected at least 5 increasing
+Event: stress
+  seasonality - morning: 42.0% actual, expected at least 40.0% (events: 5832/13888)
+  seasonality - afternoon: 18.9% actual, expected at least 20.0% (events: 2631/13888)
+  seasonality - evening: 17.1% actual, expected at least 20.0% (events: 2374/13888)
+  seasonality - night: 21.3% actual, expected at least 20.0% (events: 2954/13888)
+  seasonality - Outside defined windows: 0.7% (events: 97/13888)
+  trend - trend diff 3, expected at least 3 increasing
+  trend - trend diff -2, expected at least 2 decreasing
+  trend - trend diff -2, expected at least 1 decreasing
+
+=== LTL (Event Model) Constraint Violations ===
+No violations found.
